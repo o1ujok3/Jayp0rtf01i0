@@ -33,9 +33,22 @@ nav a {
 }
 
 section {
-    display: flex;
-    flex-wrap: wrap;
-    padding: 15px;
+    display: grid;
+    grid-template-rows: repeat(3, 1fr); 
+   grid-template-columns: 1fr 5fr;
+    justify-items: flex-start;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100vh;
+    overflow: hidden;
+    grid-gap: .5rem;
+    grid-template-areas: ;
+
+}
+
+section li a{
+    text-decoration: none;
+    list-style: none;
 }
 
 footer {
