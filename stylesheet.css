@@ -16,6 +16,11 @@ header {
     padding: 20px;
 }
 
+nav {
+    display: flex;
+    justify-content: flex-end;
+}
+
 nav ul {
     list-style: none;
     margin: 0;
@@ -24,7 +29,7 @@ nav ul {
 }
 
 nav li {
-    margin-right: 20px;
+    margin-right: 6rem;
 }
 
 nav a {
@@ -34,16 +39,48 @@ nav a {
 
 section {
     display: grid;
-    grid-template-rows: repeat(3, 1fr); 
-   grid-template-columns: 1fr 5fr;
-    justify-items: flex-start;
+    grid-template-rows: repeat(4, 1fr); 
+   grid-template-columns: 3fr 5fr 5fr;
+    justify-items: flex-end;
     align-items: center;
     justify-content: flex-start;
     height: 100vh;
     overflow: hidden;
     grid-gap: .5rem;
-    grid-template-areas: ;
+    grid-template-areas: 
+    "aboutme-heading aboutme-paragraph aboutme-paragraph"
+    "projects-heading projectlistings projectlistings"
+    "projects-heading projectlistings projectlistings"
+    "contactme-heading contactme-paragraph contactme-paragraph"
+}
 
+#about-me {
+    margin-top: 40px;
+}
+
+.aboutme-heading {
+    grid-area: aboutme-heading;
+
+}
+
+.aboutme-paragraph {
+    grid-area: aboutme-paragraph;
+}
+
+.projects-heading {
+    grid-area: projects-heading;
+}
+
+.projectlistings {
+    grid-area: projectlistings;
+}
+
+.contactme-heading {
+    grid-area: contactme-heading;
+}
+
+.contactme-paragraph {
+    grid-area: contactme-paragraph;
 }
 
 section li a{
