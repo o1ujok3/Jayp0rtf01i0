@@ -38,11 +38,18 @@ nav a {
 }
 
 .aboutme-heading img {
-    max-width: 500px;
-    max-height: 300px;
-    border-radius: 500px;
-
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 5px;
+    width: 150px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    text-align: center;
 }
+
+.aboutme-heading img:hover {
+    box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
+  }
+
 section {
     display: grid;
     grid-template-columns: 1fr 4fr;
@@ -58,16 +65,16 @@ section {
 #about-me {
     margin-top: 40px;
     margin-bottom: 0;
-    border-bottom: 5px #111 dotted;
 }
 
 .aboutme-heading {
-    border-right: 5px #111 solid;
+    border-right: 3px #111 solid;
     grid-area: aboutme-heading;
 }
 
 .aboutme-heading h1 {
     text-align: center;
+    font-weight: bolder;
 }
 
 .aboutme-paragraph {
@@ -77,12 +84,12 @@ section {
 }
 
 .projects-heading {
-    border-right: 5px #111 solid;
+    border-right: 3px #111 solid;
     grid-area: projects-heading;
 }
 
 .contactme-heading {
-    border-right: 5px #111 solid;
+    border-right: 3px #111 solid;
 }
 .projectlistings {
     grid-area: projectlistings;
