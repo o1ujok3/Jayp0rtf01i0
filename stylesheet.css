@@ -5,10 +5,7 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
-html, body {
-    height: 100%;
-    scroll-behavior: smooth;
-}
+/* header section */
 
 header {
     background-color: #222;
@@ -37,18 +34,41 @@ nav a {
     text-decoration: none;
 }
 
-.aboutme-heading img {
+/* Styling section for the main part which contains "About me" section */
+
+.aboutme-paragraph {
+    display: flex;
+    justify-content: space-between;
+    grid-area: aboutme-paragraph;
+}
+
+.aboutme-paragraph img {
     border: 1px solid #ddd;
     border-radius: 4px;
     padding: 5px;
-    width: 150px;
+    width: 100%;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     text-align: center;
 }
 
-.aboutme-heading img:hover {
+.aboutme-paragraph img:hover {
     box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
   }
+
+.olujoke-image {
+    position: relative;
+    padding-right: 15px;
+    text-align: center;
+    color: #111;
+}
+
+.bottom-left {
+    position: relative;
+    bottom: 1.8rem;
+    left: 5px;
+    background-color: rgb(22, 21, 21);
+    color: #DDDDDD;
+}
 
 section {
     display: grid;
@@ -63,8 +83,8 @@ section {
 }
 
 #about-me {
-    margin-top: 40px;
     margin-bottom: 0;
+    background-color: #dedace;
 }
 
 .aboutme-heading {
@@ -77,30 +97,42 @@ section {
     font-weight: bolder;
 }
 
-.aboutme-paragraph {
-    grid-area: aboutme-paragraph;
-    padding: 4%;
-
-}
-
 .projects-heading {
+    text-align: center;
     border-right: 3px #111 solid;
     grid-area: projects-heading;
 }
 
 .contactme-heading {
+    text-align: center;
     border-right: 3px #111 solid;
 }
+
+#projects {
+    background-color: #dedace;
+}
+
+#contact {
+    background-color: #dedace;
+}
+
 .projectlistings {
     grid-area: projectlistings;
 }
 
 .recipedia img {
-    max-width: 100%;
     max-height: auto;
- 
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 5px;
+    width: 100%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    text-align: center;
 }
 
+.recipedia img:hover {
+    box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
+  }
 .img-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -108,7 +140,17 @@ section {
 
 .img-container img {
     max-width: 200%;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 5px;
+    width: 100%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    text-align: center;
 }
+
+.img-container img:hover {
+    box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
+  }
 
 .contactme-heading {
     grid-area: contactme-heading;
@@ -123,6 +165,105 @@ section li a{
     list-style: none;
 }
 
+.form-style {
+    max-width:400px;
+	margin:50px auto;
+	background:#fff;
+	border-radius:2px;
+	padding:20px;
+	font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+.form-style ul {
+    list-style:none;
+	padding:0;
+	margin:0;
+}
+
+.form-style li {
+    display: block;
+	padding: 9px;
+	border:1px solid #DDDDDD;
+	margin-bottom: 30px;
+	border-radius: 3px;
+}
+
+.form-style li:last-child {
+    border:none;
+	margin-bottom: 0px;
+	text-align: center;
+}
+
+.form-style li > label {
+    display: block;
+	float: left;
+	margin-top: -19px;
+	background: #FFFFFF;
+	height: 14px;
+	padding: 2px 5px 2px 5px;
+	color: #B9B9B9;
+	font-size: 14px;
+	overflow: hidden;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+.form-style input[type="text"],
+.form-style input[type="email"],
+.form-style textarea {
+    box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	width: 100%;
+	display: block;
+	outline: none;
+	border: none;
+	height: 25px;
+	line-height: 25px;
+	font-size: 16px;
+	padding: 0;
+	font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+.form-style input[type="text"]:focus,
+.form-style input[type="email"]:focus,
+.form-style textarea:focus {}
+
+.form-style li > span {
+    background: #F3F3F3;
+	display: block;
+	padding: 3px;
+	margin: 0 -9px -9px -9px;
+	text-align: center;
+	color: #C0C0C0;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+}
+
+.form-style textarea {
+    resize:none;
+}
+
+.form-style input[type="submit"],
+.form-style input[type="button"] {
+    background: #2471FF;
+	border: none;
+	padding: 10px 20px 10px 20px;
+	border-bottom: 3px solid #5994FF;
+	border-radius: 3px;
+	color: #D2E2FF;
+}
+
+.form-style input[type="submit"]:hover,
+.form-style input[type="button"]:hover {
+    background: #6B9FFF;
+	color:#fff;
+}
+
+form input:focus {
+    background-color: lightblue;
+}
+
+/* styling for the footer section that also contains the social media links */
 footer {
     background-color: #333;
     color: #fff;
@@ -130,4 +271,16 @@ footer {
     text-align: center;
 }
 
+/* Styles for screens with a width of 600px or less */
+@media screen and (max-width: 600px) {
+    body {
+        font-size: 14px;
+    }
+}
 
+/* Styles for screens with a width of 800px or more */
+@media screen and (min-width: 800px) {
+    body {
+        font-size: 18px;
+    }
+}
